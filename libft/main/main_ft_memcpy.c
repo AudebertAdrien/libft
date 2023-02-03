@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 14:10:42 by motoko            #+#    #+#             */
-/*   Updated: 2023/02/02 18:14:14 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/03 10:39:06 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main (void)
 
 	destination = (type *)malloc(t);
 	ft_memcpy(destination, source, t);
-	printf("END main ft_strlen\n");
+	printf("END main ft_memcpy\n");
 	free(destination);
 	return (0);
 }

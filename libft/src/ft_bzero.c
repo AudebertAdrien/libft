@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:25:04 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/02 16:25:57 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/03 11:34:45 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*srcCpy;
 
-	srcCpy = (unsigned char *)s;
+	srcCpy = (char *)s;
 	while (n--)
 		*srcCpy++ = '\0';	
 }
