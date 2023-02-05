@@ -6,8 +6,13 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:54:31 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 14:54:32 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/05 14:59:58 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	
+}
