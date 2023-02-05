@@ -3,7 +3,6 @@ NAME		= libft.a
 CC		= gcc
 ERROR_FLAGS	= -Wall -Wextra -Werror
 GDB_FLAGS	= -ggdb3
-STD_FLAGS	= -sdt=c99
 
 SRCS		= ft_atoi.c \
 			ft_bzero.c \
@@ -41,7 +40,7 @@ clean:
 	rm -rf *.o
 
 fclean: clean
-	rm -r $(NAME)
+	rm $(NAME)
 
 re: fclean all
 
