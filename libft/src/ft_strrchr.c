@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:50:22 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 09:34:57 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/05 09:25:24 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*str;
+	char	*res;
 
 	str = (char *)s;
+	res = 0;
 	while (*str)
 	{
 		if (*str == c)
-			return (str);
+			res = str;
 		str++;
 	}
-	if (*str == '\0')
-		return (str);
-	return (0);
+	if (!res && *str == '\0')
+		res = str;	
+	return (res);
 }

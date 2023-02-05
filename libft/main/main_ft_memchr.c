@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   main_ft_memchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 17:50:22 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 09:34:57 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/05 11:30:30 by aaudeber          #+#    #+#             */
+/*   Updated: 2023/02/05 12:09:39 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	char	*str;
+#include "libft.h"
 
-	str = (char *)s;
-	while (*str)
-	{
-		if (*str == c)
-			return (str);
-		str++;
-	}
-	if (*str == '\0')
-		return (str);
+int	main(void)
+{
+	char *s = "salut les gens";
+	char c = 101;
+	int n = 10;
+
+	ft_memchr(s, c, n);
 	return (0);
 }

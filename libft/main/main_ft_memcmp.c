@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   main_ft_memcmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 17:50:22 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 09:34:57 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/05 11:30:30 by aaudeber          #+#    #+#             */
+/*   Updated: 2023/02/05 14:16:16 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	char	*str;
+#include "libft.h"
 
-	str = (char *)s;
-	while (*str)
-	{
-		if (*str == c)
-			return (str);
-		str++;
-	}
-	if (*str == '\0')
-		return (str);
+int	main(void)
+{
+	char *s1 = "abcdefg";
+	char *s2 = "abcdef\000h";
+	int n = 20;
+
+	printf("%d", memcmp((void *)s1,(void *)s2, n));
+	printf("\n");
+	printf("%d", ft_memcmp((void *)s1,(void *)s2, n));
+	printf("\n");
 	return (0);
 }
