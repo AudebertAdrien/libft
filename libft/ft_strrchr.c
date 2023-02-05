@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:50:22 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 09:25:24 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/05 19:10:50 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strrchr(const char *s, int c)
 		str++;
 	}
 	if (!res && *str == '\0')
-		res = str;	
+		res = str;
 	return (res);
 }

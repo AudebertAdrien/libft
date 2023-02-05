@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 16:08:21 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 18:55:44 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/05 19:26:09 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	num = 0;
 	while ((nptr[i] && (nptr[i] >= 10 && nptr[i] <= 13)) || nptr[i] == 32)
-			i++;
-	if (nptr[i] && nptr[i] == 45) 
+		i++;
+	if (nptr[i] && nptr[i] == 45)
 	{
 		sign = sign * -1;
 		i++;
 	}
 	while (nptr[i] && nptr[i] >= 48 && nptr[i] <= 57)
 	{
-		num = (num * 10) + (nptr[i] - 48);	
+		num = (num * 10) + (nptr[i] - 48);
 		i++;
 	}
 	return (num * sign);
