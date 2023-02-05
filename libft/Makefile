@@ -1,34 +1,48 @@
-BIN_DIR		= bin
-NAME		= a.out
-
-SRCS_DIR	= src
-#SRCS		:= $(wildcard *.c) $(wildcard src/*.c)
-SRCS		= *$(VAR).c src/$(VAR).c
-OBJS_DIR	:= obj
-OBJS		:= $(patsubst %.c,$(OBJS_DIR)/%.o,$(SRCS))
-#OBJS		:= $(SRCS:%c=obj/%o)
-INC_DIR		= include
+NAME		= libft.a
 
 CC		= gcc
 ERROR_FLAGS	= -Wall -Wextra -Werror
 GDB_FLAGS	= -ggdb3
 STD_FLAGS	= -sdt=c99
 
+SRCS		= ft_atoi.c \
+			ft_bzero.c \
+			ft_isalnum.c \
+			ft_isalpha.c \
+			ft_isascii.c \
+			ft_isdigit.c \
+			ft_isprint.c \
+			ft_memchr.c \
+			ft_memcmp.c \
+			ft_memcpy.c \
+			ft_memmove.c \
+			ft_memset.c \
+			ft_strchr.c \
+			ft_strlcat.c \
+			ft_strlcpy.c \
+			ft_strlen.c \
+			ft_strncmp.c \
+			ft_strnstr.c \
+			ft_strrchr.c \
+			ft_tolower.c \
+			ft_toupper.c 
+
+OBJS		= $(SRCS:.c=.o)
+
+.c.o:
+	$(CC) $(ERROR_FLAGS) -I. -c $< -o $@
+
 all: $(NAME)
 
-$(OBJS_DIR)/%.o: %.c
-	mkdir -p obj/src
-	$(CC) $(GDB_FLAGS) $(ERROR_FLAGS) -I$(INC_DIR) -c $< -o $@
-
 $(NAME): $(OBJS)
-	$(CC) $(ERROR_FLAGS) $^ -o $(BIN_DIR)/$@
+	ar rcs $@ $^ 
 
 clean:
-	rm -rf $(OBJS_DIR)/*
+	rm -rf *.o
 
 fclean: clean
-	rm -r $(BIN_DIR)/* 
+	rm -r $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re

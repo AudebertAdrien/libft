@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 14:20:14 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/04 09:38:49 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/05 19:01:23 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_strlcpy(char *dst, char *src, size_t size)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (size <= 0)
 		return (0);
-	while (i < size - 1 && str[i])
+	while (src[i] && i < size - 1) 
 	{
 		dst[i] = src[i];
 		i++;
