@@ -2,7 +2,6 @@ NAME		= libft.a
 
 CC		= gcc
 ERROR_FLAGS	= -Wall -Wextra -Werror
-GDB_FLAGS	= -ggdb3
 
 SRCS		= ft_atoi.c \
 			ft_bzero.c \
@@ -37,11 +36,12 @@ $(NAME): $(OBJS)
 	ar rcs $@ $^ 
 
 clean:
-	rm -rf *.o
+	rm $(OBJS)
 
 fclean: clean
 	rm $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
+
 
 .PHONY: all clean fclean re

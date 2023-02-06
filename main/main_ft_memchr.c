@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 11:30:30 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 12:09:39 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/06 11:29:05 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int	main(void)
 {
-	char *s = "salut les gens";
-	char c = 101;
-	int n = 10;
+	char *s1 = "salut les gens";
+	char *s2 = "";
+	int s3[] = {117, 123};
+	char c1 = 'u';
+	int n = 4;
 
-	ft_memchr(s, c, n);
+	printf("%p : %p",memchr(s3, c1, n), ft_memchr(s3, c1, n));
 	return (0);
 }
