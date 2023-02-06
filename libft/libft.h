@@ -27,7 +27,7 @@
 	void 	*ft_memcpy(void *destination, const void *source, size_t size);
 	void 	*ft_memmove(void *destination, const void *source, size_t size);
 	void	*ft_memchr(const void *s, int c, size_t n);
-	int	ft_strlcpy(char *dst, char *src, size_t size);
+	size_t	ft_strlcpy(char *dst, char *src, size_t size);
 
 	size_t	ft_strlcat(char *dst, char *src, size_t size);
 

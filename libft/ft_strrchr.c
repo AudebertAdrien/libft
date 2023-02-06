@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:50:22 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 19:10:50 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/06 16:52:39 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	res = 0;
 	while (*str)
 	{
-		if (*str == c)
+		if (*str == (char)c)
 			res = str;
 		str++;
 	}
-	if (!res && *str == '\0')
+	if (!res && *str == c)
 		res = str;
 	return (res);
 }

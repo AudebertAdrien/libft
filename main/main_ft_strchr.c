@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:49:09 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/04 18:08:14 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/06 16:20:06 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,8 +14,8 @@
 int	main(void)
 {
 	char *str = "tptp";
-	char c = '\0';
-
-	ft_strchr(str, c);
+	char c = 0;
+	
+	printf("%p : %p", strchr(str, c), ft_strchr(str, c));
 	return (0);
 }

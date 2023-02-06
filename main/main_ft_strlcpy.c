@@ -6,21 +6,22 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 16:11:37 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/04 08:59:25 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:50:10 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <bsd/string.h>
 
-#define SIZE 5
+#define SIZE 2
 
 int main(void)
 {
-	char s1[] = {'t','o','\0','\0'};
-	char s2[] = {'q','q','q','q','\0'};
+	char s1[] = "te";
+	char s2[10];
+	memset(s2, 'A', 10);
 
-	strlcpy(s2, s1, SIZE);	
+	printf("%ld : %ld", strlcpy(s2, s1, SIZE), ft_strlcpy(s2, s1, SIZE));	
 		
 	return (0);
 }

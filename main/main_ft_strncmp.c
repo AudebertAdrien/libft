@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 09:55:30 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 14:14:32 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:57:43 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 int	main(void)
 {
-	char *s1 = "abcdefg";
-	char *s2 = "";
-	char *s3 = "";
-	int size = 20;
+	char *s1 = "1234";
+	char *s2 = "1235";
+	int size = 3;
 
 	printf("%d : %d", strncmp(s1, s2, size), ft_strncmp(s1, s2, size));	
 	printf("\n");
