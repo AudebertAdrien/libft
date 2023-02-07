@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 09:59:58 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/07 10:01:13 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:12:40 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		if (s1[i] == s2[i])
 			i++;
 	}		
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

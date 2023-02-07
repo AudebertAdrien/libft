@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 16:11:37 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/04 17:18:14 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:15:17 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,32 +16,34 @@
 
 int main(void)
 {
-	
+	/*	
 	char *s1 = "toto";
 	char s2[5] = {'q','b'};
 
 	char *s3 = "toto";
 	char s4[5] = {'q','b'};
 	printf("%ld : %ld", ft_strlcat(s2, s1, SIZE), strlcat(s4, s3, SIZE));	
+	*/
+		
+	char s1[] = "This is ";
+	char s2[] = "a potentially long string";
 
-	/*	
-	char first[] = "This is ";
-	char last[] = "a potentially long string";
-	size_t r;
+	char dst2[] = "This is ";
+	char src2[] = "a potentially long string";
+
+	int r;
 	int size = 16;
 	char buffer[size];
 
 	strcpy(buffer,first);
-	r = strlcat(buffer,last,size);
+	r = ft_strlcat(buffer,last,size);
 
 	puts(buffer);
-	printf("Value returned: %ld\n",r);
-	if( r > size )
+	printf("Value returned: %d\n",r);
+	if(r > size )
 		puts("String truncated");
 	else
 		puts("String was fully copied");
 
-	return(0);
-	*/
 	return (0);
 }
