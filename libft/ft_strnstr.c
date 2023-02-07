@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:54:31 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/06 20:08:14 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/07 10:00:15 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		if (little[j] == '\0')
 			return ((char *)&big[i]);
 		i++;
-		
 	}
 	return (0);
 }

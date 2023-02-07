@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 11:32:52 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/06 11:25:14 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/07 09:59:00 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
-	size_t	i;
+	size_t			i;
 
 	i = 0;
 	str = (unsigned char *)s;
