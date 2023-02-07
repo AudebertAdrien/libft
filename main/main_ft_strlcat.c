@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 16:11:37 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/07 16:15:17 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:34:08 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,7 @@
 #define SIZE 5
 
 int main(void)
-{
-	/*	
-	char *s1 = "toto";
-	char s2[5] = {'q','b'};
-
-	char *s3 = "toto";
-	char s4[5] = {'q','b'};
-	printf("%ld : %ld", ft_strlcat(s2, s1, SIZE), strlcat(s4, s3, SIZE));	
-	*/
-		
+{		
 	char s1[] = "This is ";
 	char s2[] = "a potentially long string";
 
