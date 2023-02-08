@@ -12,7 +12,7 @@
 	int	ft_isalnum(int c);
 	int	ft_isascii(int c);
 	int	ft_isprint(int c);
-	int	ft_strlen(const char *str);
+	size_t	ft_strlen(const char *str);
 	int	ft_toupper(int c);
 	int	ft_tolower(int c);
 	char	*ft_strchr(const char *s, int c);
@@ -33,4 +33,6 @@
 
 	void	*ft_calloc(size_t nmemb, size_t size);
 	char	*ft_strdup(const char *s);
+
+	char	*ft_substr(char const *s, unsigned int start,size_t len);
 #endif
