@@ -5,6 +5,7 @@ ERROR_FLAGS	= -Wall -Wextra -Werror
 
 SRCS		= ft_atoi.c \
 			ft_bzero.c \
+			ft_calloc.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -16,6 +17,7 @@ SRCS		= ft_atoi.c \
 			ft_memmove.c \
 			ft_memset.c \
 			ft_strchr.c \
+			ft_strdup.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
