@@ -6,17 +6,19 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:35:42 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/07 16:56:07 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/08 11:14:44 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	main(void)
 {
 	char	*ptr;
-	size_t	length;
+	size_t	nmemb;
 
-	len = 50;	
-	ptr = (char *)calloc(len, sizeof(char));
+	nmemb = 50;	
+	ptr = (char *)ft_calloc(nmemb, sizeof(char));
 	
 	if (ptr == NULL)
 	{
