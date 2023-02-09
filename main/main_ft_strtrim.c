@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   main_ft_strtrim.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 11:22:57 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/09 14:27:09 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/09 14:28:03 by aaudeber          #+#    #+#             */
+/*   Updated: 2023/02/09 17:22:53 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	main(void)
 {
-	char	*ptr;
-	int		i;
-	int		j;
+	char	s1[] = "lorem \n ipsum \t dolor \n sit \t amet";
+	char	*set1 = " ";
 
-	i = 0;
-	j = 0;
-	ptr = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
-	if (!ptr)
-		return (NULL);
-	while (s1[i] && s1 && s2)
-	{
-		ptr[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
-		ptr[i] = s2[j];
-		j++;
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+	char	s2[] = "lorem ipsum dolor sit amet";
+	char	*set2 = "te";
+
+	char	s3[] = "lorem ipsum dolor sit amet";
+	char	*set3 = "l ";
+
+	char	*s4 = ".,toto,.";
+	char	*set4 = ".,";
+
+	printf("%s", ft_strtrim(s1, set1));
+	return (0);
 }
