@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   main_ft_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/02 11:33:38 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/09 17:51:59 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/09 17:32:08 by aaudeber          #+#    #+#             */
+/*   Updated: 2023/02/09 17:37:34 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	main(void)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	char	*s1 = "toto\nfait\ndu\nvelo\n";
+	char	c = '\n';
+	ft_split(s1, c);
+	return (0);
 }
