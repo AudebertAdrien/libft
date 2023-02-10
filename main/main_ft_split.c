@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:32:08 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/09 17:37:34 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/10 15:56:33 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,24 @@
 
 int	main(void)
 {
-	char	*s1 = "toto\nfait\ndu\nvelo\n";
+	char	*s1 = "to\nfan\ndu\nvelo\n";
+	char	*s2 = "\ntoto\na la\nmaison";
+	char	*s3 = "\naie\naie\n";
 	char	c = '\n';
-	ft_split(s1, c);
+	
+	char **s;
+	int i = 0;
+	s = ft_split(s2, c);
+	while (s[i])
+	{
+		printf(":%s:\n", s[i]);
+		i++;
+	}
+	printf("\n");
+	printf("%p", ft_split(s2, c));
+	printf("\n");
+	printf("%p", ft_split(s3, c));
+	printf("\n");
 	return (0);
 }
+
