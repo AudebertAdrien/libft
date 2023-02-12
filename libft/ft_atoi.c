@@ -6,9 +6,16 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 16:08:21 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/07 10:01:42 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:46:22 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The  atoi()  function  converts the initial portion of the string
+	pointed to by nptr to int.
+	RETURN VALUE :
+       		The converted value.
+*/
 
 int	ft_atoi(const char *nptr)
 {

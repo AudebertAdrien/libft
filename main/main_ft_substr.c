@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:37:32 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/08 18:34:03 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/12 19:22:37 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(void)
 {
 	char	*s = "lorem ipsu";
 	char	*s2 = "";
-	printf("%p",ft_substr(s, 3, 6));
+	printf("%p",ft_substr(s, 1, 1));
 	printf("\n");
 	printf("%p",ft_substr(s, 7, 10));
 	printf("\n");
