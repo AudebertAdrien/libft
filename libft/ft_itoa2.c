@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/10 16:48:11 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/12 15:22:32 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/12 14:23:17 by aaudeber          #+#    #+#             */
+/*   Updated: 2023/02/12 15:22:37 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,47 +19,47 @@ int	count_number(int n)
 	count = 0;
 	if (n < 0)
 	{
-		n = n * -1;
 		count++;
+		n *= -1;	
 	}
 	while (n != 0)
 	{
-		n = n / 10;
+		n /= 10;
 		count++;
 	}
 	return (count);
 }
 
+void	malloc_	
+
 char	*ft_itoa(int n)
 {
-	char	*ptr;
+	int	sign;
 	int	count;
-	int	tmp = n;	
-	unsigned int s = 0;
-
-	if (!n)
-		return (NULL);
-
-	count = count_number(n);
+	char	*ptr;
 
 	if (n <= -2147483648)
-		s = (unsigned int)n;	
-
-	if (s < 0)
-		n = n *-1;	
-	ptr = (char *)malloc(sizeof(char) * count + 1);
-	if (!ptr)
-		return (NULL);
-	
-	ptr[count] = '\0';
-	count--;
-	while (s != 0)
-	{	
-		ptr[count] = s % 10 + 48;	
-		s = s / 10;
-		count--;
-	}	
-	if (n < 0)
-		ptr[0] = '-'; 
+	{
+		ptr = malloc(12);
+		ptr = "-2147483648";
+	}
+	else
+	{
+		count = count_number(n);
+		sign = 1;
+		ptr = (char *)malloc(sizeof(char) * count + 1); 
+		if (n < 0)
+		{
+			sign *= -1;
+			n *= sign;
+			ptr[0] = '-';
+		}
+		ptr[count] = '\0';	
+		while (count--)
+		{			
+			ptr[count] = n % 10 + 48;
+			n /= 10;
+		}
+	}
 	return (ptr);
 }
