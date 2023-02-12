@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/10 16:48:11 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/12 15:22:32 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/12 14:23:17 by aaudeber          #+#    #+#             */
+/*   Updated: 2023/02/12 17:21:34 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,47 +19,52 @@ int	count_number(int n)
 	count = 0;
 	if (n < 0)
 	{
-		n = n * -1;
 		count++;
+		n *= -1;	
 	}
 	while (n != 0)
 	{
-		n = n / 10;
+		n /= 10;
 		count++;
 	}
 	return (count);
 }
 
-char	*ft_itoa(int n)
+char	*generate_table(int count)
 {
 	char	*ptr;
-	int	count;
-	int	tmp = n;	
-	unsigned int s = 0;
 
-	if (!n)
-		return (NULL);
+	ptr = (char *)malloc(sizeof(char) * count + 1); 
+	return (ptr);
+}	
 
-	count = count_number(n);
-
-	if (n <= -2147483648)
-		s = (unsigned int)n;	
-
-	if (s < 0)
-		n = n *-1;	
-	ptr = (char *)malloc(sizeof(char) * count + 1);
-	if (!ptr)
-		return (NULL);
+unsigned int	convert_n(int n)
+{
+	unsigned int s;
 	
-	ptr[count] = '\0';
-	count--;
-	while (s != 0)
-	{	
-		ptr[count] = s % 10 + 48;	
-		s = s / 10;
-		count--;
-	}	
+	s = (unsigned int)n;
 	if (n < 0)
-		ptr[0] = '-'; 
+		s = n * -1;;
+	return (s);
+}
+
+char	*ft_itoa(int n)
+{
+	int	count;
+	char	*ptr;
+	unsigned int s;
+
+	s = 0;
+	count = count_number(n);
+	s = convert_n(n);	
+	ptr = generate_table(count);
+	ptr[count] = '\0';
+	while (count-- && n)
+	{	
+		ptr[count] = s % 10 + 48;
+		s /= 10;
+	}
+	if (n < 0)
+		ptr[0] = '-';
 	return (ptr);
 }
