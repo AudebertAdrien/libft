@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:23:17 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/12 17:21:34 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:35:42 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*generate_table(int count)
 	char	*ptr;
 
 	ptr = (char *)malloc(sizeof(char) * count + 1); 
+	if (!ptr)
+		return (NULL);
 	return (ptr);
 }	
 
@@ -58,8 +60,10 @@ char	*ft_itoa(int n)
 	count = count_number(n);
 	s = convert_n(n);	
 	ptr = generate_table(count);
+	if (!ptr)
+		return (NULL);
 	ptr[count] = '\0';
-	while (count-- && n)
+	while (count-- && s)
 	{	
 		ptr[count] = s % 10 + 48;
 		s /= 10;
