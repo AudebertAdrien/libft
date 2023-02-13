@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   main_ft_putnbr_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 09:50:30 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/13 15:35:02 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/13 17:23:40 by motoko            #+#    #+#             */
+/*   Updated: 2023/02/13 17:36:40 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+#include "libft.h"
+
+int main (int argc, char *argv[])
 {
-	
-	return (NULL);
+	int n = -15;
+	int fd = 1;
+
+	ft_putnbr_fd(n, fd);
+	return 0;
 }

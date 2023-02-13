@@ -1,17 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 09:50:30 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/13 15:35:02 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/13 17:22:49 by motoko            #+#    #+#             */
+/*   Updated: 2023/02/13 17:37:28 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	
-	return (NULL);
+	unsigned int s;
+
+	s = 0;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		s = n * -1;
+	}
+	else
+		s = n;
+	if (s > 9)
+		ft_putnbr_fd(s / 10, fd);
+	ft_putchar_fd(s % 10 + 48, fd);
 }

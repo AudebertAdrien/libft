@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 09:50:30 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/13 15:35:02 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/13 16:39:38 by motoko            #+#    #+#             */
+/*   Updated: 2023/02/13 17:20:07 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	
-	return (NULL);
+	int	i;
+
+	i = ft_strlen(s);
+	write(fd, s, i);
+	write(fd, "\n", 1);
 }
