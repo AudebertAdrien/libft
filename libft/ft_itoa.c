@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:23:17 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/12 17:35:42 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/13 11:40:50 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	count_number(int n)
 	int	count;
 
 	count = 0;
-	if (n < 0)
+	if (n <= 0)
 	{
 		count++;
 		n *= -1;	
@@ -33,7 +33,6 @@ int	count_number(int n)
 char	*generate_table(int count)
 {
 	char	*ptr;
-
 	ptr = (char *)malloc(sizeof(char) * count + 1); 
 	if (!ptr)
 		return (NULL);
@@ -43,7 +42,7 @@ char	*generate_table(int count)
 unsigned int	convert_n(int n)
 {
 	unsigned int s;
-	
+		
 	s = (unsigned int)n;
 	if (n < 0)
 		s = n * -1;;
@@ -63,7 +62,7 @@ char	*ft_itoa(int n)
 	if (!ptr)
 		return (NULL);
 	ptr[count] = '\0';
-	while (count-- && s)
+	while (count--)
 	{	
 		ptr[count] = s % 10 + 48;
 		s /= 10;
