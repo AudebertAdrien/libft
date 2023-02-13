@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:35:22 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/12 18:20:59 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:05:41 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*ptr;
+	void	*ptr;
 
-	if (!nmemb || !size)
-		return (NULL);
 	if (nmemb * size / size != nmemb)
 		return (NULL);
-	ptr = (char *)malloc(nmemb * size);
+	ptr = (void *)malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, nmemb);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
