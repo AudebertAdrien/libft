@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:22:49 by motoko            #+#    #+#             */
-/*   Updated: 2023/02/13 17:37:28 by motoko           ###   ########.fr       */
+/*   Updated: 2023/02/13 19:31:07 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int s;
+	unsigned int	s;
 
 	s = 0;
 	if (n < 0)

@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:19:52 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/09 12:22:06 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:23:46 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 int	main(void)
 {
-	char *s1 = "toto";
-	char *s2 = " fait du velo";
-	
-	char *s3 = "";
-	char *s4 = "hello";	
-	printf("%s", ft_strjoin(s1, s2));
-	printf("\n");
-	printf("%s", ft_strjoin(s3, s4));
+	char *s1 = "my favorite animal is ";
+ 	char *s2 = s1 + 20;
+
+	printf("%s", ft_strjoin(s2, s1));
 	return (0);
 }
