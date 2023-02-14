@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 14:28:31 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/12 19:15:06 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/14 16:20:53 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 
 	i = 0;
+	if (!s1 || !set)
+		return (NULL);
 	j = ft_strlen(s1) - 1;
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	while (s1[j] && ft_strchr(set, s1[j]))
+	while (ft_strchr(set, s1[j]))
 		j--;
 	ptr = ft_substr(s1, i, j - i + 1);
 	return (ptr);

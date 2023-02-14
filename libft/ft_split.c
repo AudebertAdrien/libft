@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 11:16:06 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/14 13:44:41 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/14 16:14:35 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char	**ft_split(char const *s, char c)
 
 	t = 0;
 	i = 0;
+	if (!s)
+		return (NULL);
 	tab = (char **)ft_calloc((ft_count_words(s, c) + 1), sizeof(char *));
 	if (!tab)
 		return (NULL);

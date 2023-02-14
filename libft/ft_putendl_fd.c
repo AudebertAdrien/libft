@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:39:38 by motoko            #+#    #+#             */
-/*   Updated: 2023/02/13 17:20:07 by motoko           ###   ########.fr       */
+/*   Updated: 2023/02/14 16:22:08 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = ft_strlen(s);
-	write(fd, s, i);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
