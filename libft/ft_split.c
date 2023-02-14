@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 17:33:18 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/10 16:05:47 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/14 11:16:06 by aaudeber          #+#    #+#             */
+/*   Updated: 2023/02/14 13:44:41 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,46 +16,41 @@ int	ft_count_words(const char *s, char c)
 {
 	int	count;
 	int	i;
-	
+
 	i = 0;
 	count = 0;
-	while(s[i])
+	while (s[i])
 	{
-		if ((i == 0 || s[i - 1] == c) && s[i] != c)
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
 			count++;
 		i++;
 	}
-	return(count);
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	j;
-	int	n;
-	int	t;
 	char	**tab;
+	int		i;
+	int		j;
+	int		t;
 
-	i = 0;
 	t = 0;
-	n = ft_count_words(s, c);
-	tab = (char **)malloc((n + 1) * sizeof(char *));
+	i = 0;
+	tab = (char **)ft_calloc((ft_count_words(s, c) + 1), sizeof(char *));
 	if (!tab)
 		return (NULL);
 	while (s[i])
 	{
-		if ((i == 0 || s[i - 1] == c) && s[i] != c) // si i  est sur le debut dun mot
+		j = 0;
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
 		{
-			j = 1;
 			while (s[i + j] && s[i + j] != c)
 				j++;
-			// i = debut du mot
-			// j = longueur du mot	
 			tab[t] = ft_substr(s, i, j);
 			t++;
-			i += j - 1; // dernier du mot
 		}
-		i++;							
+		i++;
 	}
 	tab[t] = NULL;
 	return (tab);
