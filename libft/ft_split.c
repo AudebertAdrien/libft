@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 11:16:06 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/14 16:14:35 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/15 13:57:43 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ char	**ft_split(char const *s, char c)
 		{
 			while (s[i + j] && s[i + j] != c)
 				j++;
-			tab[t] = ft_substr(s, i, j);
-			t++;
+			tab[t++] = ft_substr(s, i, j);
 		}
 		i++;
 	}

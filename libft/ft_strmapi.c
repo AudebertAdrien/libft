@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 09:50:30 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/14 15:04:48 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/15 14:04:02 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char	*ptr;
+	char			*ptr;
 
 	i = 0;
 	if (!s || !f)
