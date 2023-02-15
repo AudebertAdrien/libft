@@ -35,7 +35,12 @@ SRCS		= ft_atoi.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c \
+			ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c
 
 OBJS		= $(SRCS:.c=.o)
 
@@ -46,6 +51,8 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc ${NAME} ${OBJS} 
+
+bonus : all
 
 clean:
 	rm -f $(OBJS)
