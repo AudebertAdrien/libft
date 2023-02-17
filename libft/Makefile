@@ -42,7 +42,14 @@ SRCS		= ft_atoi.c \
 			ft_lstadd_back_bonus.c \
 			ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c \
-			ft_lstdelone_bonus.c
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 OBJS		= $(SRCS:.c=.o)
 
@@ -55,7 +62,7 @@ $(NAME): $(OBJS)
 	ar rc ${NAME} ${OBJS} 
 
 bonus : all
-
+	
 clean:
 	rm -f $(OBJS)
 
