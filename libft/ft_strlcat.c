@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 14:20:14 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/14 15:49:49 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/17 18:21:08 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	i = 0;
 	dst_size = ft_strlen(dst);
 	src_size = ft_strlen(src);
+	if (!size)
+		return (src_size);
 	if (size < dst_size)
 		return (size + src_size);
 	while (src[i] && (i + dst_size) < (size - 1))
