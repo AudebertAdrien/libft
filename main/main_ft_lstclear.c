@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   main_ft_lstclear.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 18:06:25 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/17 11:27:54 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/16 17:58:20 by aaudeber          #+#    #+#             */
+/*   Updated: 2023/02/16 19:07:49 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_test();
 {
-	t_list	*start;
-	t_list	*tmp;
 
-	if (!lst || !del)
-		return ;
-	start = *lst;
-	while (start)
-	{
-		tmp = start->next;
-		del(start->content);
-		free(start);
-		start = tmp; 		
-	}	
-	*lst = NULL;
+}
+
+int	main(void)
+{
+	t_list	*first = ft_lstnew(NULL);
+	t_list	*two = ft_lstnew(NULL);
+	t_list	*three = ft_lstnew(NULL);
+
+	t1->next = t2;
+	t2->next = t3;
+
+	f = &ft_test;
+	ft_lstclear(first, f);
+	return (0);
 }
