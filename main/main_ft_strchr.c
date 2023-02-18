@@ -6,14 +6,14 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:49:09 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/06 16:20:06 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/18 14:23:38 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	main(void)
 {
-	char *str = "tptp";
+	char *str = ((void*)0);
 	char c = 0;
 	
 	printf("%p : %p", strchr(str, c), ft_strchr(str, c));

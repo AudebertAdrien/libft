@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:49:09 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/05 09:37:57 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/18 15:38:01 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	main(void)
 {
-	char *str = "salat";
+	char *str = ((void *)0);
 	char c = 'a';
 
-	ft_strchr(str, c);
+	printf("%p", ft_strrchr("teste", 1024));
 	return (0);
 }

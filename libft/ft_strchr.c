@@ -6,9 +6,11 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:50:22 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/12 19:27:07 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/02/18 14:26:26 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 	DESCRIPTION
@@ -26,6 +28,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*str;
 
+	if (c == 0)
+		return ((char *)s + ft_strlen(s));
 	str = (char *)s;
 	while (*str)
 	{
@@ -33,7 +37,5 @@ char	*ft_strchr(const char *s, int c)
 			return (str);
 		str++;
 	}
-	if (*str == (char)c)
-		return (str);
-	return (0);
+	return (NULL);
 }
