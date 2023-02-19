@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:50:22 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/18 14:26:26 by motoko           ###   ########.fr       */
+/*   Updated: 2023/02/19 09:51:47 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*str;
 
-	if (c == 0)
-		return ((char *)s + ft_strlen(s));
 	str = (char *)s;
 	while (*str)
 	{
@@ -37,5 +35,7 @@ char	*ft_strchr(const char *s, int c)
 			return (str);
 		str++;
 	}
+	if (*str == (char)c)
+		return (str);
 	return (NULL);
 }
